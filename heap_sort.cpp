@@ -26,7 +26,7 @@ void solution::disp_arr(int* arr,int n){
 }
 
 void solution::heapify(int* arr,int n,int root){
-    begin:
+    
         int largest=root,li=2*root+1,ri=2*root+2;
         if(li<n && arr[li]>arr[largest]){
             largest=li;
@@ -37,7 +37,7 @@ void solution::heapify(int* arr,int n,int root){
         if(largest!=root){
             swap(arr[largest],arr[root]);
             root=largest;
-            goto begin;
+            heapify(arr,n,largest);
             
         }
 }
