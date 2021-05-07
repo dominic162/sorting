@@ -13,9 +13,9 @@ If position of pivot is given then first swap pivot and last element after that 
 */
 int partition(int a[],int low,int high){
 	int i=low-1;
-	for(int j=low;j<=high-1;j++){
+	for(int j = low;j <= high-1 ; j++){
 
-		if(a[j]<a[high]){
+		if(a[j] < a[high]){
 			i++;
 			swap(a[i],a[j]);
 		}
