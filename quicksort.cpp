@@ -25,7 +25,7 @@ int partition(int a[],int low,int high){
 }
 
 void quicksort(int a[],int start,int end){
-	begin:
+	//begin:
 		if(start<end){
 			int pi;
 			pi=partition(a,start,end);
@@ -33,8 +33,8 @@ void quicksort(int a[],int start,int end){
 
 			quicksort(a,start,pi-1);
 			start=pi+1;
-			//quicksort(a,pi+1,end);
-			goto begin; // tailcall elimination
+			quicksort(a,pi+1,end);
+			//goto begin;  tailcall elimination (use loop instead of goto statement)
 		}
 }
 
